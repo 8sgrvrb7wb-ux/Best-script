@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farris Hub - Arcade Proxy & Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Galaxy Background -->
+    <div id="galaxy-background"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>✨ Farris Hub ✨</h1>
+            <p class="subtitle">Your Gateway to Arcade Games & Web Search</p>
+        </div>
+        
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search the web with DuckDuckGo..."
+                    autocomplete="off"
+                >
+                <button class="search-btn" id="searchBtn">🔍 Search</button>
+                <button class="proxy-btn" id="proxyBtn">🌐 Open Proxy</button>
+            </div>
+        </div>
+        
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" data-tab="games">🎮 Arcade Games</button>
+            <button class="tab-btn" data-tab="search">🔎 Search Results</button>
+            <button class="tab-btn" data-tab="about">ℹ️ About</button>
+        </div>
+        
+        <!-- Games Tab -->
+        <div id="games" class="tab-content active">
+            <div class="games-header">
+                <h2>Popular Arcade Games</h2>
+                <input 
+                    type="text" 
+                    id="gameSearchInput" 
+                    class="game-search" 
+                    placeholder="Search games..."
+                    autocomplete="off"
+                >
+            </div>
+            <div class="games-grid" id="gamesGrid">
+                <!-- Games will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Search Results Tab -->
+        <div id="search" class="tab-content">
+            <div class="search-results" id="searchResults">
+                <p class="empty-state">Enter a search query to get started</p>
+            </div>
+        </div>
+        
+        <!-- About Tab -->
+        <div id="about" class="tab-content">
+            <div class="about-content">
+                <h2>About Farris Hub</h2>
+                <p>Welcome to Farris Hub - your ultimate destination for:</p>
+                <ul>
+                    <li>🎮 Access to 1000+ Classic Arcade Games</li>
+                    <li>🔍 Integrated DuckDuckGo Search Engine</li>
+                    <li>🌍 Web Proxy for Anonymous Browsing</li>
+                    <li>✨ Beautiful Galaxy-themed Interface</li>
+                </ul>
+                <p class="footer-text">Farris Hub v1.0 - Built with ❤️</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <iframe id="gameFrame" src="" frameborder="0" allowfullscreen></iframe>
+            <button class="modal-close-btn">Close Game</button>
+        </div>
+    </div>
+    
+    <script src="games-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
